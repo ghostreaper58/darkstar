@@ -11,9 +11,10 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
+<<<<<<< HEAD
 function onSpellCast(caster,target,spell)
 
 
@@ -34,4 +35,29 @@ function onSpellCast(caster,target,spell)
 	target:addStatusEffect(EFFECT_REFRESH,mp,3,duration);
 
     return EFFECT_REFRESH;
+=======
+function onSpellCast(caster,target,spell)
+    local mp = 3;
+    local duration = 150;
+
+    mp = mp + caster:getMod(MOD_ENHANCES_REFRESH);
+
+    if (caster:hasStatusEffect(EFFECT_COMPOSURE) and caster:getID() == target:getID()) then
+        duration = duration * 3;
+    end
+
+    if (target:getMainLvl() < 41) then
+        duration = duration * target:getMainLvl() / 41;
+    end
+
+    if (target:hasStatusEffect(EFFECT_SUBLIMATION_ACTIVATED) or target:hasStatusEffect(EFFECT_SUBLIMATION_COMPLETE)) then
+        spell:setMsg(75);
+        return 0;
+    end
+
+    target:delStatusEffect(EFFECT_REFRESH);
+    target:addStatusEffect(EFFECT_REFRESH,mp,3,duration);
+
+    return EFFECT_REFRESH;
+>>>>>>> upstream/master
 end;

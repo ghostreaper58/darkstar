@@ -70,10 +70,10 @@ function onUseAbility(player,target,ability)
     local base = weaponDamage + fstr
     local cratio, ccritratio = cMeleeRatio(player, target, params, 0);
     local isSneakValid = player:hasStatusEffect(EFFECT_SNEAK_ATTACK);
-    if(isSneakValid and not player:isBehind(target))then
+    if (isSneakValid and not player:isBehind(target)) then
         isSneakValid = false;
     end
-    local pdif = generatePdif(cratio[1], cratio[2], true);
+    local pdif = generatePdif (cratio[1], cratio[2], true);
     local hitrate = getHitRate(player,target,true);
     
     if (math.random() <= hitrate or isSneakValid) then
@@ -82,7 +82,7 @@ function onUseAbility(player,target,ability)
         
         local bonus = 50 - target:getMod(MOD_STUNRES) + player:getMod(MOD_VFLOURISH_MACC);
         local spell = getSpell(252);
-        local resist = applyResistance(player,spell,target,0,player:getSkillLevel(player:getWeaponSkillType(SLOT_MAIN)),bonus);
+        local resist = applyResistance(player,spell,target,0,player:getWeaponSkillType(SLOT_MAIN),bonus);
         
         if resist > 0.25 then
             target:addStatusEffect(EFFECT_STUN, 1, 0, 2);

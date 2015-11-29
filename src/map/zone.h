@@ -326,10 +326,18 @@ enum ZONEID : uint16
     ZONE_MOUNT_KAMIHR                 = 282,
     ZONE_SILVER_KNIFE                 = 283,
     ZONE_CELENNIA_MEMORIAL_LIBRARY    = 284,
-    ZONE_FERETORY                     = 285
+    ZONE_FERETORY                     = 285,
+    ZONE_286                          = 286,
+    ZONE_287                          = 287,
+    ZONE_ESCHA_ZITAH                  = 288,
+    ZONE_ESCHA_RUAUN                  = 289,
+    ZONE_DESUETIA_EMPYREAL_PARADOX    = 290,
+    ZONE_REISENJIMA                   = 291,
+    ZONE_292                          = 292,
+    ZONE_REISENJIMA_SANCTORIUM        = 293
 };
 
-#define MAX_ZONEID 286
+#define MAX_ZONEID 294
 
 enum REGIONTYPE : uint8
 {
@@ -352,12 +360,10 @@ enum REGIONTYPE : uint8
     REGION_TULIA            = 16,
     REGION_MOVALPOLOS       = 17,
     REGION_TAVNAZIA         = 18,
-
     REGION_SANDORIA         = 19,
     REGION_BASTOK           = 20,
     REGION_WINDURST         = 21,
     REGION_JEUNO            = 22,
-
     REGION_DYNAMIS          = 23,
     REGION_TAVNAZIAN_MARQ   = 24,
     REGION_PROMYVION        = 25,
@@ -424,7 +430,6 @@ enum ZONEMISC
     MISC_COSTUME    = 0x0040,   // Ability to use a Costumes
     MISC_PET        = 0x0080,   // Ability to summon Pets
     MISC_TREASURE   = 0x0100,   // Presence in the global zone TreasurePool
-    MISC_PVP        = 0x0200,   // Ability to PvP
     MISC_YELL       = 0x0400    // Send and receive /yell commands
 };
 
