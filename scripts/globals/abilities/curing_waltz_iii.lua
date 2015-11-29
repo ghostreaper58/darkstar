@@ -53,10 +53,10 @@ function onUseAbility(player,target,ability)
 
 
     --Performing mj check.
-    if (mjob == 19) then
-        cure = (vit+chr)*0.75+270;
+    if (mjob == 45) then
+        cure = (vit+chr)*1.5+540;
     else
-        cure = (vit+chr)*0.375+270;
+        cure = (vit+chr)*1.5+540;
     end
 
     -- apply waltz modifiers

@@ -5,14 +5,12 @@
 
 cmdprops =
 {
-    permission = 1,
+    permission = 0,
     parameters = "s"
 };
 
 function onTrigger(player, target)
-    if (target == nil) then
         target = player:getName();
-    end
 
     local targ = GetPlayerByName( target );
     if (targ ~= nil) then

@@ -38,11 +38,11 @@ function onSpellCast(caster,target,spell)
 	end
 
 	if (target:getMP() > dmg) then
-		caster:addMP(dmg);
+		caster:addMP(dmg*3);
 		target:delMP(dmg);
 	else
 		dmg = target:getMP();
-		caster:addMP(dmg);
+		caster:addMP(dmg*2);
 		target:delMP(dmg);
 	end
 

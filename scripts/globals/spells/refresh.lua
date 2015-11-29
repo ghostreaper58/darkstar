@@ -15,8 +15,8 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    local mp = 3;
-    local duration = 150;
+    local mp = 25;
+    local duration = 600;
 
     mp = mp + caster:getMod(MOD_ENHANCES_REFRESH);
 

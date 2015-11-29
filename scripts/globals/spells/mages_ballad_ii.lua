@@ -15,15 +15,15 @@ end;
 
 function onSpellCast(caster,target,spell)
 
-	local power = 4;
+	local power = 50;
 
 	local iBoost = caster:getMod(MOD_BALLAD_EFFECT) + caster:getMod(MOD_ALL_SONGS_EFFECT);
     power = power + iBoost;
     
     if (caster:hasStatusEffect(EFFECT_SOUL_VOICE)) then
-        power = power * 2;
+        power = power * 4;
     elseif (caster:hasStatusEffect(EFFECT_MARCATO)) then
-        power = power * 1.5;
+        power = power * 3;
     end
     caster:delStatusEffect(EFFECT_MARCATO);
     

@@ -18,23 +18,23 @@ function onSpellCast(caster,target,spell)
 	local sLvl = caster:getSkillLevel(SKILL_SNG); -- Gets skill level of Singing
     local iLvl = caster:getWeaponSkillLevel(SLOT_RANGED);
 
-	local power = 3;
+	local power = 75;
 
     if (sLvl+iLvl > 200) then
-        power = power + 1;
+        power = power + 75;
     end
 
 	local iBoost = caster:getMod(MOD_PAEON_EFFECT) + caster:getMod(MOD_ALL_SONGS_EFFECT);
     power = power + iBoost;
     
     if (caster:hasStatusEffect(EFFECT_SOUL_VOICE)) then
-        power = power * 2;
+        power = power * 4;
     elseif (caster:hasStatusEffect(EFFECT_MARCATO)) then
-        power = power * 1.5;
+        power = power * 3;
     end
     caster:delStatusEffect(EFFECT_MARCATO);
     
-    local duration = 120;
+    local duration = 300;
     duration = duration * ((iBoost * 0.1) + (caster:getMod(MOD_SONG_DURATION_BONUS)/100) + 1);
     
     if (caster:hasStatusEffect(EFFECT_TROUBADOUR)) then

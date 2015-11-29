@@ -29,7 +29,7 @@ function onPetAbility(target, pet, skill, master)
    -- TODO: 5 per merit for augmented AF2 (10663 *w/ augment*)
    local deep = 0;
    if (pet:hasStatusEffect(EFFECT_MAGIC_ATK_BOOST) == true) then
-      deep = 50 + (master:getMerit(MERIT_DEEP_BREATHING)-1)*5;
+      deep = 50 + (master:getMerit(MERIT_DEEP_BREATHING)-1)*10;
       pet:delStatusEffect(EFFECT_MAGIC_ATK_BOOST);
    end
 
@@ -37,7 +37,7 @@ function onPetAbility(target, pet, skill, master)
 
    local tp = math.floor(skill:getTP()/20)/1.165; -- HP only increases for every 20% TP
 
-   local base = math.floor(((53+tp+gear+deep)/256)*(pet:getMaxHP())+42);
+   local base = math.floor(((53+tp+gear+deep)/256)*(pet:getMaxHP())+900);
    if (target:getHP()+base > target:getMaxHP()) then
       base = target:getMaxHP() - target:getHP(); --cap it
    end

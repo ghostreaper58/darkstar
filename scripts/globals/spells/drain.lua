@@ -48,7 +48,7 @@ function onSpellCast(caster,target,spell)
 
 	dmg = (dmg * DRAIN_POWER);
 
-	caster:addHP(dmg);
+	caster:addHP(dmg*2);
 	return dmg;
 
 end;
