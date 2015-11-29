@@ -36,15 +36,10 @@ function onPetAbility(target, pet, skill, master)
 
    local gear = master:getMod(MOD_WYVERN_BREATH); -- Master gear that enhances breath
 
-<<<<<<< HEAD
-   local base = math.floor((90/256)*(gear+(pet:getTP()/1024)+deep+1)*(pet:getHP())+42);
-   if(target:getHP()+base > target:getMaxHP()) then
-=======
    local tp = math.floor(skill:getTP()/20)/1.165; -- HP only increases for every 20% TP
 
    local base = math.floor(((45+tp+gear+deep)/256)*(pet:getMaxHP())+42);
    if (target:getHP()+base > target:getMaxHP()) then
->>>>>>> upstream/master
       base = target:getMaxHP() - target:getHP(); --cap it
    end
    skill:setMsg(MSG_SELF_HEAL);
