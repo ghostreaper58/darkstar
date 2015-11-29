@@ -25,8 +25,8 @@ function onSpellCast(caster,target,spell)
 		skill = 500;
 	end
 	
-	local duration = 3 * (1 + (skill / 11));
-	local base = math.floor((math.floor(0.67 * caster:getMainLvl())/10)*(37 + math.floor(0.67*dINT)))
+	local duration = 3 * (1 + (skill / 5));
+	local base = math.floor((math.floor(0.67 * caster:getMainLvl())/5)*(37 + math.floor(0.67*dINT)))
 	
 	local resist = applyResistance(caster,spell,target,dINT,skill,0)
 	

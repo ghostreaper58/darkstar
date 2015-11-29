@@ -1,45 +1,23 @@
------------------------------------
--- Area: Bastok Markets
--- NPC: Anguysh
--- Standard Info NPC
------------------------------------
+---------------------------------------------------------------------------------------------------
+-- func: store for exp rings and other rare ex items 
+---------------------------------------------------------------------------------------------------
+
+cmdprops =
+{
+    permission = 0,
+    parameters = "iiii"
+};
+function onTrigger(player)
 
 
-package.loaded["scripts/zones/Bastok_Markets/TextIDs"] = nil;
-require("scripts/zones/Bastok_Markets/TextIDs");
+   
+stock = {
 
------------------------------------
--- onTrade Action
------------------------------------
-
-function onTrade(player,npc,trade)
-end; 
-
------------------------------------
--- onTrigger Action
------------------------------------
-
-function onTrigger(player,npc)
-player:startEvent(0x87);
-end; 
-
------------------------------------
--- onEventUpdate
------------------------------------
-
-function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
-end;
-
------------------------------------
--- onEventFinish
------------------------------------
-
-function onEventFinish(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
-end;
+15840,1, --kupo ring
 
 
 
+   }
+ 
+showShop(player, STATIC, stock);
+end

@@ -65,13 +65,13 @@ ALCHEMY_GUILD_POINTS      = 100.000; -- Multiplies guild points earned from alch
 COOKING_GUILD_POINTS      = 100.000; -- Multiplies guild points earned from culinarians' guild trades.
 DISABLE_GUILD_CONTRACTS   = 1; -- Set to 1 to disable guild contracts, allowing players to accumulate guild points from all guilds at once.
 
-CURE_POWER  = 1.000; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
+CURE_POWER  = 2.000; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
 SPELL_POWER = 1.000; -- Multiplies damage dealt by Elemental and Divine Magic.
 BLUE_POWER  = 1.000; -- Multiplies damage dealt by most Blue Magic.
-DRAIN_POWER = 1.000; -- Multiplies amount drained by Drain, Aspir, and relevant Blue Magic spells.
+DRAIN_POWER = 2.000; -- Multiplies amount drained by Drain, Aspir, and relevant Blue Magic spells.
 ITEM_POWER  = 100.000; -- Multiplies the effect of items such as Potions and Ethers.
 WEAPON_SKILL_POWER  = 1.000; -- Multiplies damage dealt by Weapon Skills.
-WEAPON_SKILL_POINTS = 1.000; -- Multiplies points earned during weapon unlocking.
+WEAPON_SKILL_POINTS = 10.000; -- Multiplies points earned during weapon unlocking.
 USE_ADOULIN_WEAPON_SKILL_CHANGES = true; -- true/false. Change to toggle new Adoulin weapon skill damage calculations
 
 HARVESTING_BREAK_CHANCE = 0; -- % chance for the sickle to break during harvesting.  Set between 0 and 1.
@@ -99,8 +99,8 @@ LandKingSystem_HQ = 2;
 -- DYNAMIS SETTINGS
     BETWEEN_2DYNA_WAIT_TIME = 1;        -- wait time between 2 Dynamis (in real day) min: 1 day
              DYNA_LEVEL_MIN = 65;       -- level min for entering in Dynamis
-    TIMELESS_HOURGLASS_COST = 500000;   -- cost of the timeless hourglass for Dynamis.
-     CURRENCY_EXCHANGE_RATE = 100;      -- X Tier 1 ancient currency -> 1 Tier 2, and so on.  Certain values may conflict with shop items.  Not designed to exceed 198.
+    TIMELESS_HOURGLASS_COST = 500;   -- cost of the timeless hourglass for Dynamis.
+     CURRENCY_EXCHANGE_RATE = 5;      -- X Tier 1 ancient currency -> 1 Tier 2, and so on.  Certain values may conflict with shop items.  Not designed to exceed 198.
 RELIC_2ND_UPGRADE_WAIT_TIME = 604800;      -- wait time for 2nd relic upgrade (stage 2 -> stage 3) in seconds. 604800s = 1 RL week.
 RELIC_3RD_UPGRADE_WAIT_TIME = 295200;      -- wait time for 3rd relic upgrade (stage 3 -> stage 4) in seconds. 295200s = 82 hours.
 FREE_COP_DYNAMIS = 1 ; -- Authorize player to entering inside COP Dynamis without completing COP mission ( 1 = enable 0= disable)
@@ -115,7 +115,7 @@ AF1_FAME = 20; -- base fame for completing an AF1 quest
 AF2_FAME = 40; -- base fame for completing an AF2 quest
 AF3_FAME = 60; -- base fame for completing an AF3 quest
 DEBUG_MODE = 0; -- Set to 1 to activate auto-warping to the next location (only supported by certain missions / quests).
-QM_RESET_TIME = 30; -- Default time (in seconds) you have from killing ???-pop mission NMs to click again and get key item, until ??? resets.
+QM_RESET_TIME = 300; -- Default time (in seconds) you have from killing ???-pop mission NMs to click again and get key item, until ??? resets.
 OldSchoolG1 = false; -- Set to true to require farming Exoray Mold, Bombd Coal, and Ancient Papyrus drops instead of allowing key item method.
 OldSchoolG2 = false; -- Set true to require the NMs for "Atop the Highest Mountains" be dead to get KI like before SE changed it.
 FrigiciteDuration = 30; -- When OldSChoolG2 is enabled, this is the time (in seconds) you have from killing Boreal NMs to click the "???" target.
@@ -127,32 +127,32 @@ LOW_LEVEL_REGIME = 0; --Allow people to kill regime targets even if they give no
 GROUNDS_TOMES = 1; -- Enables Grounds of Valor tomes
 
 -- JOB ABILITY/TRAIT SPECIFIC SETTINGS
-SCAVENGE_RATE = 1; --The chance of obtaining an item when you use the Ranger job ability Scavenge.  Do not set above 1!
-STATUS_RESIST_MULTIPLIER = 10; -- Sets the strength of status resist traits.
-CIRCLE_DURATION = 300; -- Sets the duration of circle effects, in seconds. Retail is 5 minutes.
-CIRCLE_KILLER_EFFECT = 30; -- Intimidation percentage granted by circle effects. (made up number)
-KILLER_EFFECT = 30; -- Intimidation percentage from killer job traits.
+SCAVENGE_RATE = 0.75; --The chance of obtaining an item when you use the Ranger job ability Scavenge.  Do not set above 1!
+STATUS_RESIST_MULTIPLIER = 25; -- Sets the strength of status resist traits.
+CIRCLE_DURATION = 900; -- Sets the duration of circle effects, in seconds. Retail is 5 minutes.
+CIRCLE_KILLER_EFFECT = 75; -- Intimidation percentage granted by circle effects. (made up number)
+KILLER_EFFECT = 75; -- Intimidation percentage from killer job traits.
 
 -- SPELL SPECIFIC SETTINGS
 MILK_OVERWRITE = 0; --Set to 1 to allow Milk and Regen to overwrite each other.  Default is 1.
 JUICE_OVERWRITE = 0; --Set to 1 to allow Juice and Refresh to overwrite each other.  Default is 1.
 DIA_OVERWRITE = 1; --Set to 1 to allow Bio to overwrite same tier Dia.  Default is 1.
-BIO_OVERWRITE = 0; --Set to 1 to allow Dia to overwrite same tier Bio.  Default is 0.
+BIO_OVERWRITE = 1; --Set to 1 to allow Dia to overwrite same tier Bio.  Default is 0.
 BARELEMENT_OVERWRITE = 1; --Set to 1 to allow Barelement spells to overwrite each other (prevent stacking).  Default is 1.
 BARSTATUS_OVERWRITE = 1; --Set to 1 to allow Barstatus spells to overwrite each other (prevent stacking).  Default is 1.
 BARD_SONG_LIMIT = 2; --Maximum amount of songs from a single Bard that can be granted to a single target at once.  Set between 1 and 31.
 BARD_INSTRUMENT_LIMIT = 4; --Maximum amount of songs from a single Bard with an instrument that can be granted to a single target at once.  Set between 2 and 32.
-ENHANCING_SONG_DURATION = 300; -- duration of enhancing bard songs such as Minuets, Ballads, etc.
+ENHANCING_SONG_DURATION = 600; -- duration of enhancing bard songs such as Minuets, Ballads, etc.
 STONESKIN_CAP = 750; -- soft cap for hp absorbed by stoneskin
 BLINK_SHADOWS = 3;   -- number of shadows supplied by Blink spell
-ENSPELL_DURATION = 300; -- duration of RDM en-spells
-SPIKE_EFFECT_DURATION = 300; -- the duration of RDM, BLM spikes effects (not Reprisal)
-ELEMENTAL_DEBUFF_DURATION = 120; -- base duration of elemental debuffs
-STORM_DURATION = 300; -- duration of Scholar storm spells
-KLIMAFORM_MACC = 30;  -- magic accuracy added by Klimaform. 30 is just a guess.
-AQUAVEIL_INTERR_RATE = 25;  -- percent spell interruption rate reduction from Aquaveil (see http://www.bluegartrls.com/forum/82143-spell-interruption-down-cap-aquaveil-tests.html)
-ABSORB_SPELL_AMOUNT = 16; -- how much of a stat gets absorbed by DRK absorb spells - expected to be a multiple of 8.
-ABSORB_SPELL_TICK = 9; -- duration of 1 absorb spell tick
+ENSPELL_DURATION = 900; -- duration of RDM en-spells
+SPIKE_EFFECT_DURATION = 900; -- the duration of RDM, BLM spikes effects (not Reprisal)
+ELEMENTAL_DEBUFF_DURATION = 240; -- base duration of elemental debuffs
+STORM_DURATION = 600; -- duration of Scholar storm spells
+KLIMAFORM_MACC = 60;  -- magic accuracy added by Klimaform. 30 is just a guess.
+AQUAVEIL_INTERR_RATE = 50;  -- percent spell interruption rate reduction from Aquaveil (see http://www.bluegartrls.com/forum/82143-spell-interruption-down-cap-aquaveil-tests.html)
+ABSORB_SPELL_AMOUNT = 32; -- how much of a stat gets absorbed by DRK absorb spells - expected to be a multiple of 8.
+ABSORB_SPELL_TICK = 18; -- duration of 1 absorb spell tick
 SNEAK_INVIS_DURATION_MULTIPLIER = 2; -- multiplies duration of sneak,invis,deodorize to reduce player torture. 1 = retail behavior. MUST BE INTEGER.
 USE_OLD_CURE_FORMULA = false; -- true/false. if true, uses older cure formula (3*MND + VIT + 3*(healing skill/5)) // cure 6 will use the newer formula
 
@@ -174,11 +174,11 @@ HALLOWEEN_YEAR_ROUND = 0; -- Set to 1 to have Harvest Festival initialize outsid
 HOMEPOINT_HEAL = 1; --Set to 1 if you want Home Points to heal you like in single-player Final Fantasy games.
 RIVERNE_PORTERS = 180; -- Time in seconds that Unstable Displacements in Cape Riverne stay open after trading a scale.
 LANTERNS_STAY_LIT = 1200; -- time in seconds that lanterns in the Den of Rancor stay lit.
-ENABLE_COP_ZONE_CAP=1; -- enable or disable lvl cap
-TIMEZONE_OFFSET = 9.0; -- Offset from UTC used to determine when "JP Midnight" is for the server.  Default is JST (+9.0).
+ENABLE_COP_ZONE_CAP=0; -- enable or disable lvl cap
+TIMEZONE_OFFSET = 11.0; -- Offset from UTC used to determine when "JP Midnight" is for the server.  Default is JST (+9.0).
 ALLOW_MULTIPLE_EXP_RINGS = 1; -- Set to 1 to remove ownership restrictions on the Chariot/Empress/Emperor Band trio.
 BYPASS_EXP_RING_ONE_PER_WEEK = 1; -- -- Set to 1 to bypass the limit of one ring per Conquest Tally Week.
-NUMBER_OF_DM_EARRINGS = 1; -- Number of earrings players can simultaneously own from Divine Might before scripts start blocking them (Default: 1)
+NUMBER_OF_DM_EARRINGS = 5; -- Number of earrings players can simultaneously own from Divine Might before scripts start blocking them (Default: 1)
 HOMEPOINT_TELEPORT = 1; -- Enables the homepoint teleport system
 DIG_ABUNDANCE_BONUS = 500; -- Increase chance of digging up an item (450  = item digup chance +45)
 DIG_FATIGUE = 0; -- Set to 0 to disable Dig Fatigue

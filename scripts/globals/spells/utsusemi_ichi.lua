@@ -17,9 +17,9 @@ function onSpellCast(caster,target,spell)
 	local effect = target:getStatusEffect(EFFECT_COPY_IMAGE);
 	
 	-- Get extras shadows
-	local bonusShadow = 0;
+	local bonusShadow = 3;
 	if caster:getEquipID(SLOT_FEET) == 11156 then
-		bonusShadow = 1;
+		bonusShadow = 2;
 	end	
 	
 	if (effect == nil) then

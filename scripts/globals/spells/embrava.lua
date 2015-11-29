@@ -22,9 +22,9 @@ function onSpellCast(caster,target,spell)
 	if (skill > 500) then
 		skill = 500;
 	end
-	local regen = math.floor(skill / 7) + 1;
-	local refresh = math.floor(skill / 100) + 1;
-	local haste = math.floor(skill/(500/256));
+	local regen = math.floor(skill / 3.5) + 1;
+	local refresh = math.floor(skill / 50) + 1;
+	local haste = math.floor(skill/(512/256));
 	
 	target:addStatusEffect(EFFECT_EMBRAVA,regen,0,180,0,refresh,haste);
 		
