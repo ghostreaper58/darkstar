@@ -243,9 +243,9 @@ function finishGov(player,csid,option,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,msg_offset)
     local HAS_SUPPORT_FOOD = player:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD);
 -- ================= FIELD SUPPORT ============================================
     if (option == GOV_MENU_REPATRIATION) then -- Send to home nation
-	if (tabs >= 50) then
+        if (tabs >= 50) then
             player:delCurrency("valor_point", 50);
-            toHomeNation(player); -- Needs an entry in /scripts/globals/teleports.lua?
+            toHomeNation(player);
         end
     elseif (option == GOV_MENU_CIRCUMSPECTION) then -- Sneak + Invis
         if (tabs >= 5) then
@@ -261,7 +261,11 @@ function finishGov(player,csid,option,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,msg_offset)
             player:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,1);
         end
     elseif (option == GOV_MENU_RERAISE) then -- Reraise 1
- 
+        if (tabs >= 10) then
+            player:delCurrency("valor_point", 10);
+            player:delStatusEffect(EFFECT_RERAISE);
+            player:addStatusEffect(EFFECT_RERAISE,1,0,7200);
+        end
     elseif (option == GOV_MENU_RERAISE_II) then -- Reraise 2
         if (tabs >= 20) then
             player:delCurrency("valor_point", 20);
