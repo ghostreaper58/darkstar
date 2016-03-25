@@ -8,7 +8,7 @@ require("scripts/globals/magic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
@@ -22,7 +22,7 @@ function onSpellCast(caster,target,spell)
         return EFFECT_LULLABY;
     end
 
-    if (target:hasImmunity(1) or 100 * math.random() < target:getMod(MOD_SLEEPRES)) then
+    if (target:hasImmunity(1) or 100 * math.random() < target:getMod(MOD_LULLABYRES)) then
         --No effect
         spell:setMsg(75);
     else

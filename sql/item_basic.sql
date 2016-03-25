@@ -3710,7 +3710,7 @@ INSERT INTO `item_basic` VALUES (4016,0,'tulfaire_feather','tulfaire_feather',12
 INSERT INTO `item_basic` VALUES (4017,0,'mandragora_sprout','mand_sprout',12,0,44,0,79);
 INSERT INTO `item_basic` VALUES (4018,0,'guatambu_log','guatambu_log',1,0,43,0,79);
 INSERT INTO `item_basic` VALUES (4019,0,'piece_of_guatambu_lumber','gua_lumber',12,0,43,0,79);
-INSERT INTO `item_basic` VALUES (4020,0,'chunk_of_titanium_ore','titanium_ore',1,0,38,0,79);
+INSERT INTO `item_basic` VALUES (4020,0,'chunk_of_titanium_ore','titanium_ore',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4021,0,'titanium_ingot','titanium_ingot',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4022,0,'titanium_sheet','titanium_sheet',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4023,0,'chunk_of_snowsteel_ore','snowsteel_ore',12,0,38,0,79);
@@ -6483,10 +6483,14 @@ INSERT INTO `item_basic` VALUES (10944,0,'portus_collar','portus_collar',1,63568
 INSERT INTO `item_basic` VALUES (10945,0,'waylayers_scarf','waylayers_scarf',1,34816,22,0,0);
 INSERT INTO `item_basic` VALUES (10946,0,'coatl_gorget','coatl_gorget',1,34816,22,0,0);
 INSERT INTO `item_basic` VALUES (10947,0,'saevus_pendant','saevus_pendant',1,34816,22,0,0);
+INSERT INTO `item_basic` VALUES (10948,0,'carvers_torque','carvers_torque',1,63568,99,0,0);
 INSERT INTO `item_basic` VALUES (10949,0,'smithys_torque','smithys_torque',1,63568,99,0,0);
+INSERT INTO `item_basic` VALUES (10950,0,'goldsmiths_torque','goldsm._torque',1,63568,99,0,0);
+INSERT INTO `item_basic` VALUES (10951,0,'weavers_torque','weavers_torque',1,63568,99,0,0);
 INSERT INTO `item_basic` VALUES (10952,0,'tanners_torque','tanners_torque',1,63568,99,0,0);
 INSERT INTO `item_basic` VALUES (10953,0,'boneworkers_torque','boneworkers_torque',1,63568,99,0,0);
-INSERT INTO `item_basic` VALUES (10954,0,'alchemists_torque','alchemst_torque',1,63568,99,0,0);
+INSERT INTO `item_basic` VALUES (10954,0,'alchemists_torque','alchemst._torque',1,63568,99,0,0);
+INSERT INTO `item_basic` VALUES (10955,0,'culinarians_torque','culin._torque',1,63568,99,0,0);
 INSERT INTO `item_basic` VALUES (10957,0,'stoicheion_medal','stoicheion_medal',1,34880,22,0,0);
 INSERT INTO `item_basic` VALUES (10958,0,'nefarious_collar','nefarious_collar',1,34816,22,0,0);
 INSERT INTO `item_basic` VALUES (10959,0,'inquisitors_chain','inquisitors_chain',1,34816,99,0,0);
